@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi-minimal
 
-RUN microdnf install net-tools curl jq iproute && \
+RUN microdnf install net-tools curl jq iproute procps-ng && \
     microdnf clean all
 
 COPY ./.bashrc_ext /root/
